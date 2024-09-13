@@ -1,45 +1,169 @@
-<!DOCTYPE html>
-<html lang="ko">
+<?php include_once("./layout/header.html"); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>락픽 RAKPICK</title>
-    <!-- 파비콘 세팅 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#488c03">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
-</head>
+    <!-- 메인 컨텐츠 -->
+    <main id="main">
 
-<body>
+        <section id="mainBanner">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/banner/slideimg01.jpg" alt="맞춤코칭 슬라이드 배너 이미지입니다">
+                        <div class="slideText text-left">
+                            <p class="fontSC6 text01">고민은 이제 그만!</p>
+                            <h3>락픽 1 : 1 맞춤 영양  도시락</h3>
+                            <p class="text02">임상영양사가 설계해주는 나만의 맞춤 PLAN 도시락!<br>
+                            매일 설레는 다양한 구성의 영양 가득 도시락!</p>
+                            <a href="#">지금 체험해보세요<span></span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/banner/slideimg01.jpg" alt="맞춤코칭 슬라이드 배너 이미지입니다">
+                        <div class="slideText">
+                            <p class="fontSC6 text01">슬라이드 2번</p>
+                            <h3>락픽 메인 슬라이드 2번</h3>
+                            <p class="text02">임상영양사가 설계해주는 나만의 맞춤 PLAN 도시락!<br>
+                            매일 설레는 다양한 구성의 영양 가득 도시락!</p>
+                            <a href="#">지금 체험해보세요<span></span></a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/banner/slideimg01.jpg" alt="맞춤코칭 슬라이드 배너 이미지입니다">
+                        <div class="slideText">
+                            <p class="fontSC6 text01">슬라이드 3번</p>
+                            <h3>락픽 메인 슬라이드 3번</h3>
+                            <p class="text02">임상영양사가 설계해주는 나만의 맞춤 PLAN 도시락!<br>
+                            매일 설레는 다양한 구성의 영양 가득 도시락!</p>
+                            <a href="#">지금 체험해보세요<span></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
 
-    <!-- 헤더 영역 -->
-    <div id="wrap">
-        <header id="header">
-            <h1><a href="">ㅠㅠ화이팅!!!<img src="" alt=""></a></h1>
-            서버작업 화이팅....
-        </header>
-    </div>
+        <section id="rankingContainer" class="my-lg-0 mx-lg-auto">
+            <h2 class="text-center"><a href="#">명예의전당</a></h2>
+            <p class="text-center">락픽 고객님의 맞춤 도시락 누적 좋아요 수 주간 랭킹</p>
+            <ol class="rankingBox d-lg-flex flex-wrap">
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="/img/ranking/img01.jpg" alt="명예의전당 1위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/so.svg" alt="명예의전당 1위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>김소정</span>님의 저당 도시락
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="img/ranking/img02.jpg" alt="명예의전당 2위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/ji.svg" alt="명예의전당 2위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>박지혜님</span>의 저염 도시락
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="img/ranking/img03.jpg" alt="명예의전당 3위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/sim.svg" alt="명예의전당 3위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>심채림</span>님의 고단백 도시락
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="img/ranking/img04.jpg" alt="명예의전당 4위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/you.svg" alt="명예의전당 4위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>전유진</span>님의 단백질 도시락
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="img/ranking/img05.jpg" alt="명예의전당 5위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/bae.svg" alt="명예의전당 5위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>배하은</span>님의 비건 도시락
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="col-4">
+                    <a href="#" class="imgBox">
+                        <img src="img/ranking/img06.jpg" alt="명예의전당 6위 도시락입니다">
+                    </a>
+                    <ul>
+                        <li class="userImg"><a href="#">
+                            <img src="/img/userimg/se.svg" alt="명예의전당 6위 유저 이미지입니다">
+                        </a></li>
+                        <li class="userProduct"><a href="#">
+                            <span>이세현</span>님의 저당 도시락
+                        </a></li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
 
-    <!-- 푸터 영역 -->
-    <footer></footer>
+        <section id="coachingContainer" class="my-lg-0 mx-lg-auto">
+            <h2 class="text-center"><a href="#">맞춤코칭</a></h2>
+            <p class="subTitle text-center">락픽 고객님에게 딱 맞춘 1 : 1 맞춤 영양코칭</p>
+            <img src="/img/banner/subbannder.jpg" alt="맞춤코칭 소개 배너 이미지입니다." class="subBanner">
+            <div class="coachingInfo01">
+                <p class="coachingText01 text-center">
+                    영양과 맛 둘다 놓치지마세요
+                </p>
+                <p class="coachingText02 text-center">
+                    무엇을 얼마만큼 어떻게 먹어야 하는지 어렵게 느껴지시나요?<br>
+                    이제 쉽게 원하는대로 나만의 도시락을 만들어보세요
+                </p>
+                <ul class="infoImg d-lg-flex justify-content-lg-center align-items-lg-center">
+                    <li><img src="/img/icon/coachingimg01.svg" alt="임상영양사 이미지 입니다."><span></span></li>
+                    <li><img src="/img/icon/coachingimg02.svg" alt="의학전문가 이미지 입니다."><span></span></li>
+                    <li><img src="/img/icon/coachingimg03.svg" alt="AI 이미지 입니다."><span></span></li>
+                    <li><img src="/img/icon/coachingimg04.svg" alt="식품전문가 이미지 입니다."><span></span></li>
+                </ul>
+            </div>
+            <div class="coachingInfo02">
+                <p class="coachingText03 text-center">락픽은 임상영양사, 의학전문가, AI, 그리고 식품전문가가 모여<br>
+                    고객님에게 맞는 최적의 맞춤 도시락을 제공해드리겠습니다
+                </p>
+                <a href="#" class="coachingBtn text-center">1:1 나만의 맞춤코칭 받으러 가기<span></span></a>
+            </div>
+        </section>
 
-    <!-- Scripts -->
-    <script src="/js/bootstrap.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="/js/main.js"></script>
 
-</body>
+        <section id="reviewContainer" class="my-lg-0 mx-lg-auto">
 
-</html>
+        </section>
+
+
+    </main>
+
+
+</div>
+
+<?php include_once("./layout/footer.html"); ?>

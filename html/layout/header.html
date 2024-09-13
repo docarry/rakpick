@@ -4,18 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>락픽</title>
-    <!-- 파비콘 세팅 -->
+    <title>락픽 RAKPICK</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#488c03">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/bootstrap-5.3.3/dist/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
-    <link rel="stylesheet" href="/css/main.css">
+    
 </head>
 
 <body>
+
     <!-- 헤더 영역 -->
     <div id="wrap">
         <header id="header">
-            <h1><a href="">ㅠㅠ화이팅!!!<img src="" alt=""></a></h1>
+            <div class="container my-0 mx-auto d-lg-flex">
+                <h1><a href="#"><img src="/img/icon/mainLogo.svg" alt="락픽 메인 로고 입니다."></a></h1>
+                <nav>
+                    <ul class="depth01">
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">락픽스토리</a>
+                            <ul class="depth02">
+                                <li><a href="#">도시락소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">베스트</a>
+                            <ul class="depth02">
+                                <li><a href="#">명예의전당</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">맞춤코칭</a>
+                            <ul class="depth02">
+                                <li><a href="#">체험단</a></li>
+                                <li><a href="#">이용후기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">정기배송</a>
+                        </li>
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">이벤트</a>
+                            <ul class="depth02">
+                                <li><a href="#">당첨자발표</a></li>
+                                <li><a href="#">종료된이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="noto-sans-kr-500" href="#">커뮤니티</a>
+                            <ul class="depth02">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">이용방법</a></li>
+                                <li><a href="#">자주묻는질문</a></li>
+                                <li><a href="#">멤버십</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="utility">
+                    <li><a href="#"><img src="/img/icon/Lock.svg" alt="로그인 아이콘 입니다."></i></a></li>
+                    <li><a href="#"><img src="/img/icon/User_box.svg" alt="마이페이지 아이콘 입니다."></a></li>
+                    <li><a href="#"><img src="/img/icon/Bag.svg" alt="장바구니 아이콘 입니다."></a></li>
+                    <li id="searchButton" class="icon-button"><a href="#"><img src="/img/icon/Search_alt.svg" alt="검색 아이콘 입니다." id="searchIcon"></a></li>
+                </ul>
+                <div class="menuCover"></div>
+                <!-- <div id="searchModal">
+                    <div class="searchPopup">
+                        <form class="searchBox">
+                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
+                            <ul class="searchList">
+                                <li><a href="#">#저염 도시락</a></li>
+                                <li><a href="#">#고단백 도시락</a></li>
+                                <li><a href="#">#단백질 도시락</a></li>
+                                <li><a href="#">#비건 도시락</a></li>
+                            </ul>
+                        </form>
+                        <button class="searchCloseBtn"></button>
+                    </div>
+                </div> -->
+                <!-- <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <form class="searchBox"></form>
+                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
+                            <ul class="searchList">
+                                <li><a href="#">#저염 도시락</a></li>
+                                <li><a href="#">#고단백 도시락</a></li>
+                                <li><a href="#">#단백질 도시락</a></li>
+                                <li><a href="#">#비건 도시락</a></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div> -->                              
+                <!-- <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <form class="searchBox"></form>
+                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
+                            <ul class="searchList">
+                                <li><a href="#">#저염 도시락</a></li>
+                                <li><a href="#">#고단백 도시락</a></li>
+                                <li><a href="#">#단백질 도시락</a></li>
+                                <li><a href="#">#비건 도시락</a></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+
+            
         </header>
-    </div>

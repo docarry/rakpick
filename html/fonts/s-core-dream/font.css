@@ -1,0 +1,81 @@
+/*****************************************************************
+S-CoreDream
+*****************************************************************/
+.fontSC1 {
+	font-family: 'S-Core1';
+}
+.fontSC2 {
+	font-family: 'S-Core2';
+}
+.fontSC3 {
+	font-family: 'S-Core3';
+}
+.fontSC4 {
+	font-family: 'S-Core4';
+}
+.fontSC5 {
+	font-family: 'S-Core5';
+}
+.fontSC6 {
+	font-family: 'S-Core6';
+}
+.fontSC7 {
+	font-family: 'S-Core7';
+}
+.fontSC8 {
+	font-family: 'S-Core8';
+}
+@font-face {
+	font-family: 'S-Core1';
+	src: url('../font/S-Core_Dream/S-Core1.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core2';
+	src: font('../font/S-Core_Dream/S-Core2.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core3';
+	src: url('../font/S-Core_Dream/S-Core3.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core4';
+	src: url('../font/S-Core_Dream/S-Core4.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core5';
+	src: url('../font/S-Core_Dream/S-Core5.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core6';
+	src: url('../font/S-Core_Dream/S-Core6.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core7';
+	src: font('../font/S-Core_Dream/S-Core7.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core';
+	src: font('../font/S-Core_Dream/S-Core8.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'S-Core';
+	src: font('../font/S-Core_Dream/S-Core9.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
