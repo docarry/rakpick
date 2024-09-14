@@ -9,7 +9,7 @@ $(function(){
     });
 });
 
-ocument.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementById('searchButton');
     const searchIcon = document.getElementById('searchIcon');
     const modal = document.getElementById('modal');
