@@ -1,0 +1,124 @@
+<?php include_once("../layout/header.html"); ?>
+
+
+<main id="eventContainer" class="container-fluid">
+
+        <article class="eventContent container">
+
+            <h2>이벤트</h2>
+            <!-- Tabs -->
+            <ul class="nav nav-tabs d-flex justify-content-between" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="img-tab" data-bs-toggle="tab" href="#img" role="tab" aria-controls="img" aria-selected="true">진행중 이벤트</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="end-tab" data-bs-toggle="tab" href="#end" role="tab" aria-controls="end" aria-selected="false">종료된 이벤트</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="winner-tab" data-bs-toggle="tab" href="#winner" role="tab" aria-controls="winner" aria-selected="false">당첨자 발표</a>
+                </li>
+            </ul>
+            <!-- Tab Content -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="img" role="tabpanel" aria-labelledby="img-tab">
+                    <ul class="imgImgList d-flex justify-content-between flex-wrap">
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event01.jpg" alt="이벤트 1번 이미지입니다">
+                            </a>
+                            <a class="eventText01" href="#">락픽 신규가입 웰컴 쿠폰 이벤트</a>
+                            <a class="eventText02" href="#">2024.09.08 - 이벤트 종료 시</a>
+                        </li>
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event02.jpg" alt="이벤트 2번 이미지입니다">
+                            </a>
+                            <a class="eventText01" href="#">락픽 첫 주문 상품권 증정 이벤트</a>
+                            <a class="eventText02" href="#">2024.09.08 - 이벤트 종료 시</a>
+                        </li>
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event03.jpg" alt="이벤트 3번 이미지입니다">
+                            </a>
+                            <a class="eventText01" href="#">락픽 수신동의 페이백 이벤트</a>
+                            <a class="eventText02" href="#">2024.09.08 - 이벤트 종료 시</a>
+                        </li>
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event04.jpg" alt="이벤트 4번 이미지입니다">
+                            </a>
+                            <a class="eventText01" href="#">락픽 10만원 이상 구매시 1만원 증정 이벤트</a>
+                            <a class="eventText02" href="#">2024.09.08 - 이벤트 종료 시</a>
+                        </li>
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event05.jpg" alt="이벤트 5번 이미지입니다">
+                            </a>
+                            <a class="eventText01 endEvent" href="#">락픽 카드 5% 청구할인 이벤트</a>
+                            <a class="eventText02" href="#"><span>종료</span>2024.09.08 - 2024.09.30</a>
+                        </li>
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event06.jpg" alt="이벤트 6번 이미지입니다">
+                            </a>
+                            <a class="eventText01" href="#">락픽 리뷰 작성시 포인트 증정 이벤트</a>
+                            <a class="eventText02" href="#">2024.09.08 - 이벤트 종료 시</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="end" role="tabpanel" aria-labelledby="end-tab">
+                    <ul class="endImgList d-flex justify-content-between flex-wrap">
+                        <li class="co1-6">
+                            <a href="#">
+                                <img src="/img/event/event05.jpg" alt="이벤트 5번 이미지입니다">
+                            </a>
+                            <a class="eventText01 endEvent" href="#">락픽 카드 5% 청구할인 이벤트</a>
+                            <a class="eventText02" href="#"><span>종료</span>2024.09.08 - 2024.09.30</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="winner" role="tabpanel" aria-labelledby="winner-tab">
+                    <ul class="winnerList">
+                        <li>
+                            <ul class="list01">
+                                <li><a href="#">신규회원 대상 할인 이벤트 당첨자 안내</a></li>
+                                <li><a href="#">2024.08.23</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="list02">
+                                <li><a href="#">8월 리뷰 공유 이벤트 당첨자 안내</a></li>
+                                <li><a href="#">2024.08.23</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <nav aria-label="Page navigation" id="eventPageBtn" class="d-flex justify-content-center">
+                <ul class="pagination eventBtnList d-flex align-items-center">
+                    <li class="page-item">
+                        <a class="page-left" href="#none" aria-label="Previous">
+                            <span aria-hidden="true" class="pageLeft"></span>
+                        </a>
+                    </li>
+                    <li class="page-item" aria-current="page">
+                        <a class="page-link" href="#none" tabindex="0">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#none" tabindex="0">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#none" tabindex="0">3</a></li>
+                    <li class="page-item">
+                        <a class="page-right" href="#none" aria-label="Next">
+                            <span aria-hidden="true" class="pageRight"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </article>
+        
+
+</main>
+
+<?php include_once("../layout/footer.html"); ?>

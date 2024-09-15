@@ -22,17 +22,25 @@ var mainBannerSwiper = new Swiper("#mainBanner-swiper.mySwiper", {
 var reviewSwiper = new Swiper("#review-Swiper.mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
-    // loop: true,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
-    navigation: {
-        nextEl: "#review-Swiper .swiper-button-next",
-        prevEl: "#review-Swiper .swiper-button-prev",
-    },
-    pagination: {
-        el: "#review-Swiper .swiper-pagination",
-        clickable: true,
+    loop: true,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
     }
+});
+
+
+// 이벤트 페이지 페이지네이션 버튼 활성화
+// 모든 페이지 링크 요소를 선택합니다.
+const pageLinks = document.querySelectorAll('.page-link');
+
+// 각 페이지 링크에 focus 이벤트와 blur 이벤트를 추가합니다.
+pageLinks.forEach(link => {
+    link.addEventListener('focus', function() {
+        this.classList.add('focused'); // 포커스 시 스타일 적용
+    });
+    
+    link.addEventListener('blur', function() {
+        this.classList.remove('focused'); // 포커스 해제 시 스타일 제거
+    });
 });
