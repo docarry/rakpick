@@ -10,10 +10,6 @@ var mainBannerSwiper = new Swiper("#mainBanner-swiper.mySwiper", {
     navigation: {
         nextEl: "#mainBanner-swiper .swiper-button-next",
         prevEl: "#mainBanner-swiper .swiper-button-prev",
-    },
-    pagination: {
-        el: "#mainBanner-swiper .swiper-pagination",
-        clickable: true,
     }
 });
 
