@@ -24,10 +24,49 @@ var reviewSwiper = new Swiper("#review-Swiper.mySwiper", {
         disableOnInteraction: false,
     }
 });
-
 $(function(){
 
     $("#review-Swiper").each(function() {
+        var swp = this.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
+    });
+
+});
+
+
+// 인스타그램 슬라이드
+var instagramSwiper01 = new Swiper("#instagramBox01.mySwiper", {
+    slidesPerView: 5,
+    loop: true,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+        reverseDirection: true
+    }
+});
+var instagramSwiper02 = new Swiper("#instagramBox02.mySwiper", {
+    slidesPerView: 5,
+    loop: true,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false
+    }
+});
+$(function(){
+
+    $("#instagramBox01").each(function() {
+        var swp = this.swiper;
+        $(this).hover(function() {
+            swp.autoplay.stop();
+        }, function() {
+            swp.autoplay.start();
+        });
+    });
+    $("#instagramBox02").each(function() {
         var swp = this.swiper;
         $(this).hover(function() {
             swp.autoplay.stop();
