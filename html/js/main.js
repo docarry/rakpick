@@ -47,12 +47,20 @@ document.getElementById('searchModalBg').removeEventListener('click', function()
 
 $(function(){
 
-    // header 고정
+    // PC header 고정
     $(window).on('scroll', function(){
         if($(window).scrollTop() > 0){
             $('#header').addClass('fix');
         }else{
             $('#header').removeClass('fix');
+        }
+    });
+    // 모바일 header 고정
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('#m-header').addClass('fix');
+        }else{
+            $('#m-header').removeClass('fix');
         }
     });
 
