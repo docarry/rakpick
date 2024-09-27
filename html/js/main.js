@@ -1,3 +1,49 @@
+// 검색창 모달
+document.getElementById('searchButton').addEventListener('click', function() {
+    const searchModal = document.getElementById('searchModal');
+    const searchModalBg = document.getElementById('searchModalBg');
+    const searchIcon = document.getElementById('searchIcon');
+
+    if (searchModal.classList.contains('active')) {
+        // 비활성화 애니메이션
+        searchModal.style.opacity = '0';
+        searchModal.style.transform = 'translateY(-2rem)';
+        searchModalBg.style.opacity = '0'; // 배경 서서히 사라지기
+        searchIcon.src = '/img/icon/Search_alt.svg'; // 아이콘을 즉시 원래대로 복구
+        setTimeout(() => {
+            searchModal.classList.remove('active');
+            searchModalBg.classList.remove('active');
+            searchModal.style.visibility = 'hidden'; // 비활성화 후 모달을 숨김
+            searchModalBg.style.visibility = 'hidden'; // 배경을 숨김
+        }, 600); // 0.3초 후에 비활성화 처리
+    } else {
+        // 활성화 애니메이션
+        searchModal.style.visibility = 'visible'; // 모달을 보이게 설정
+        searchModalBg.style.visibility = 'visible'; // 배경을 보이게 설정
+        searchModal.classList.add('active');
+        searchModalBg.classList.add('active');
+        searchIcon.src = '/img/icon/Close.svg';  // 아이콘을 즉시 변경
+        setTimeout(() => {
+            searchModal.style.opacity = '1';
+            searchModal.style.transform = 'translateY(0)';
+            searchModalBg.style.opacity = '1'; // 배경 서서히 나타나기
+        }, 10); // 약간의 지연 후 애니메이션 실행
+    }
+});
+// searchModalBg를 클릭해도 모달이 사라지지 않도록 제거
+// searchModalBg 클릭에 대한 이벤트 리스너 제거
+// 만약 searchModalBg 클릭을 무시하고 싶다면 이 부분을 생략하거나 아무 동작도 하지 않도록 유지.
+document.getElementById('searchModalBg').removeEventListener('click', function() {
+    document.getElementById('searchModal').style.display = 'none';
+    document.getElementById('searchModalBg').style.display = 'none';
+    // 아이콘을 원래대로 복구
+    document.getElementById('searchIcon').src = '/img/icon/Search_alt.svg';
+});
+// 검색창 모달 종료
+
+
+
+
 
 $(function(){
 
@@ -19,7 +65,6 @@ $(function(){
             $('#fixBtn').removeClass('btnShow');
         }
     });
-
 
 
     // 당첨자 발표
@@ -88,26 +133,32 @@ $(function(){
     $('.noticeContent .noticeBox dd').on('click', function() {
         $(this).slideUp(500); // p를 클릭하면 해당 p를 슬라이드 업
     });    
+
+
+
+    // 네비 햄버거 버튼
+    $('.navBtn').on('click', function(){
+        $(this).toggleClass('slideOn');
+    });
+
+
+    // 메인 배너 슬라이드, 서브 배너 이미지 바꾸기
+    $(window).on('resize', function() {
+        if (window.innerWidth <= 990) {
+            $('#mainBanner-swiper .slideImg01').attr('src', '/img/banner/m-slideimg01.jpg');
+            $('#mainBanner-swiper .slideImg02').attr('src', '/img/banner/m-slideimg02.jpg');
+            $('#mainBanner-swiper .slideImg03').attr('src', '/img/banner/m-slideimg03.jpg');
+            $('#coachingContainer .subBanner').attr('src', '/img/banner/m-subbannder.jpg');
+        } else if (window.innerWidth > 990) {
+            $('#mainBanner-swiper .slideImg01').attr('src', '/img/banner/slideimg01.jpg');
+            $('#mainBanner-swiper .slideImg02').attr('src', '/img/banner/slideimg02.jpg');
+            $('#mainBanner-swiper .slideImg03').attr('src', '/img/banner/slideimg06.jpg');
+            $('#coachingContainer .subBanner').attr('src', '/img/banner/subbannder.jpg');
+        }
+    });
+    // 초기 로딩 시 이미지 변경
+    $(window).trigger('resize');
     
 
 });
 
-// 검색창 모달
-// document.addEventListener('DOMContentLoaded', () => {
-//     const searchButton = document.getElementById('searchButton');
-//     const searchIcon = document.getElementById('searchIcon');
-//     const modal = document.getElementById('modal');
-
-//     // 열기/닫기 버튼 클릭 시 모달의 표시 상태를 토글합니다.
-//     searchButton.addEventListener('click', () => {
-//         if (modal.style.display === 'none' || modal.style.display === '') {
-//             modal.style.display = 'block';
-//             modal.classList.add('open');
-//             searchIcon.src = '/img/icon/xBtn.svg'; // 열기 아이콘을 닫기 아이콘으로 변경
-//         } else {
-//             modal.style.display = 'none';
-//             modal.classList.remove('open');
-//             searchIcon.src = '/img/icon/Search_alt.svg'; // 닫기 아이콘을 열기 아이콘으로 변경
-//         }
-//     });
-// });

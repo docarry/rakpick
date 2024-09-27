@@ -1,7 +1,6 @@
 // 메인배너 슬라이드
 var mainBannerSwiper = new Swiper("#mainBanner-swiper.mySwiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
     loop: true,
     autoplay: {
         delay: 2600,
@@ -22,7 +21,25 @@ var reviewSwiper = new Swiper("#review-Swiper.mySwiper", {
     autoplay: {
         delay: 1500,
         disableOnInteraction: false,
-    }
+    },
+    breakpoints: {
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+    },
+    576: {
+        slidesPerView: 2,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+    },
+    768: {
+        slidesPerView: 2,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+    },
+    1280: {
+        slidesPerView: 3,  //브라우저가 768보다 클 때
+        spaceBetween: 50,
+    },
+    },
 });
 $(function(){
 
@@ -40,42 +57,60 @@ $(function(){
 
 // 인스타그램 슬라이드
 var instagramSwiper01 = new Swiper("#instagramBox01.mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: 1,
     loop: true,
     autoplay: {
         delay: 1000,
         disableOnInteraction: false,
         reverseDirection: true
-    }
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,  //브라우저가 768보다 클 때
+        },
+        990: {
+            slidesPerView: 4,  //브라우저가 768보다 클 때
+        },
+        1280: {
+            slidesPerView: 5,  //브라우저가 768보다 클 때
+        },
+        },
 });
 var instagramSwiper02 = new Swiper("#instagramBox02.mySwiper", {
-    slidesPerView: 5,
+    slidesPerView: 1,
     loop: true,
     autoplay: {
         delay: 1000,
         disableOnInteraction: false
-    }
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,  //브라우저가 768보다 클 때
+        },
+        990: {
+            slidesPerView: 4,  //브라우저가 768보다 클 때
+        },
+        1280: {
+            slidesPerView: 5,  //브라우저가 768보다 클 때
+        },
+        },
 });
-$(function(){
-
-    $("#instagramBox01").each(function() {
-        var swp = this.swiper;
-        $(this).hover(function() {
-            swp.autoplay.stop();
-        }, function() {
-            swp.autoplay.start();
-        });
-    });
-    $("#instagramBox02").each(function() {
-        var swp = this.swiper;
-        $(this).hover(function() {
-            swp.autoplay.stop();
-        }, function() {
-            swp.autoplay.start();
-        });
-    });
-
-});
+// $(function() {
+//     // 두 개의 Swiper를 동시에 제어할 수 있는 hover 이벤트 추가
+//     $("#instagramBox01, #instagramBox02").hover(function() {
+//         instagramSwiper01.autoplay.stop();
+//         instagramSwiper02.autoplay.stop();
+//     }, function() {
+//         instagramSwiper01.autoplay.start();
+//         instagramSwiper02.autoplay.start();
+//     });
+// });
 
 
 

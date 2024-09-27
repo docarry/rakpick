@@ -15,62 +15,152 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    
-    <link rel="stylesheet" href="/css/reset.css">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://webfontworld.github.io/SCoreDream/SCoreDream.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="/scss/common.min.css">
-    <link rel="stylesheet" href="/scss/layout.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/scss/common.min.css?var=<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/layout.min.css?var=<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/main.min.css?var=<?php echo time(); ?>">
-    
+    <link rel="stylesheet" href="/scss/media.min.css?var=<?php echo time(); ?>">
+
 </head>
 
 <body>
 
-    <!-- 헤더 영역 -->
-    <div id="wrap">
-        <header id="header">
-            <div class="container my-0 mx-auto d-lg-flex">
-                <h1>
-                    <a href="/index.html"><img src="/img/icon/mainLogo.svg" alt="락픽 메인 로고 입니다."></a>
-                    <span class="blind">락픽 RAKPICK</span>
-                </h1>
-                <nav>
-                    <ul class="depth01">
+
+    <!-- PC 헤더 -->
+    <header id="header" class="d-none d-lg-block px-5">
+
+        <div class="pc-header d-flex justify-content-between align-items-center mx-auto my-0 py-2">
+            <h1>
+                <a href="/" class="d-flex justify-content-center align-items-center">
+                    <img src="/img/icon/mainLogo.svg" alt="락픽 메인 로고 입니다."></a>
+                <span class="blind">락픽 RAKPICK</span>
+            </h1>
+            <nav class="d-flex justify-content-around">
+                <ul class="depth01 d-flex">
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a href="#">락픽스토리</a>
+                    </li>
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a href="#">베스트</a>
+                        <ul class="depth02">
+                            <li><a href="#">명예의전당</a></li>
+                        </ul>
+                    </li>
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a href="#">맞춤코칭</a>
+                        <ul class="depth02">
+                            <li><a href="#">체험단</a></li>
+                            <li><a href="#">이용후기</a></li>
+                        </ul>
+                    </li>
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a href="#">정기배송</a>
+                    </li>
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="col px-lg-3 px-xl-4 px-xxl-5">
+                        <a class="lockMeun" href="#none">커뮤니티</a>
+                        <ul class="depth02">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/faq.html">자주묻는질문</a></li>
+                            <li><a href="/sub/membership.html">멤버십</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="utility d-flex justify-content-center align-items-center">
+                <li class="px-lg-1 px-xl-2"><a href="/sub/login.html"><img src="/img/icon/Lock.svg"
+                            alt="로그인 아이콘 입니다."></a></li>
+                <li class="px-lg-1 px-xl-2"><a href="#"><img src="/img/icon/User_box.svg" alt="마이페이지 아이콘 입니다."></a></li>
+                <li class="px-lg-1 px-xl-2"><a href="#"><img src="/img/icon/Bag.svg" alt="장바구니 아이콘 입니다."></a></li>
+                <li id="searchButton" class="icon-button px-lg-1 px-xl-2"><a href="#none"><img
+                            src="/img/icon/Search_alt.svg" alt="검색 아이콘 입니다." id="searchIcon"></a></li>
+            </ul>
+            <div class="menuCover"></div>
+            <div id="searchModal">
+                <div class="searchPopup d-flex flex-column">
+                    <form class="searchBox">
+                        <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
+                    </form>
+                    <ul class="searchList">
+                        <li><a href="#">#저염 도시락</a></li>
+                        <li><a href="#">#고단백 도시락</a></li>
+                        <li><a href="#">#단백질 도시락</a></li>
+                        <li><a href="#">#비건 도시락</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- 모바일 헤더 -->
+    <section id="m-header" class="d-lg-none">
+
+        <div class="m-headerBox d-flex justify-content-between">
+            <div class="m-headerList d-flex align-items-center px-3 py-2">
+                <div class="d-flex align-items-center ps-4 my-2">
+                    <span class="iosBack"></span>
+                    <h1>
+                        <a href="/" class=""><img src="/img/icon/mainLogo.svg" alt="락픽 메인 로고 입니다."></a>
+                        <span class="blind">락픽 RAKPICK</span>
+                    </h1>
+                </div>
+                <button class="navBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="m-nav p-5">
+                    <ul class="m-utility d-flex justify-content-center align-items-end py-5">
+                        <li class="d-flex flex-column align-items-center gap-1">
+                            <a href="/sub/login.html" class="m-icon01"><img src="/img/icon/Lock.svg"
+                                    alt="로그인 아이콘 입니다."></a>
+                            <span>로그인</span>
+                        </li>
+                        <li class="d-flex flex-column align-items-center gap-1">
+                            <a href="#" class="m-icon02"><img src="/img/icon/User_box.svg" alt="마이페이지 아이콘 입니다."></a>
+                            <span>내정보</span>
+                        </li>
+                    </ul>
+                    <ul class="m-depth01 p-5">
                         <li>
-                            <a class="noto-sans-kr-500" href="#">락픽스토리</a>
-                            <ul class="depth02">
-                                <li><a href="#">도시락소개</a></li>
-                            </ul>
+                            <a href="#">락픽스토리</a>
                         </li>
                         <li>
-                            <a class="noto-sans-kr-500" href="#">베스트</a>
-                            <ul class="depth02">
+                            <a href="#" class="d-flex justify-content-between align-items-center">베스트</a>
+                            <ul class="m-depth02">
                                 <li><a href="#">명예의전당</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="noto-sans-kr-500" href="#">맞춤코칭</a>
-                            <ul class="depth02">
+                            <a href="#" class="d-flex justify-content-between align-items-center">맞춤코칭</a>
+                            <ul class="m-depth02">
                                 <li><a href="#">체험단</a></li>
                                 <li><a href="#">이용후기</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="noto-sans-kr-500" href="#">정기배송</a>
+                            <a href="#">정기배송</a>
                         </li>
                         <li>
-                            <a class="noto-sans-kr-500" href="/sub/event.html">이벤트</a>
+                            <a href="/sub/event.html">이벤트</a>
                         </li>
                         <li>
-                            <a class="noto-sans-kr-500 lockMeun" href="#none">커뮤니티</a>
-                            <ul class="depth02">
+                            <a class="lockMeun d-flex justify-content-between align-items-center" href="#none">커뮤니티</a>
+                            <ul class="m-depth02">
                                 <li><a href="/sub/notice.html">공지사항</a></li>
                                 <li><a href="/sub/faq.html">자주묻는질문</a></li>
                                 <li><a href="/sub/membership.html">멤버십</a></li>
@@ -78,54 +168,13 @@
                         </li>
                     </ul>
                 </nav>
-                <ul class="utility">
-                    <li><a href="#"><img src="/img/icon/Lock.svg" alt="로그인 아이콘 입니다."></i></a></li>
-                    <li><a href="#"><img src="/img/icon/User_box.svg" alt="마이페이지 아이콘 입니다."></a></li>
-                    <li><a href="#"><img src="/img/icon/Bag.svg" alt="장바구니 아이콘 입니다."></a></li>
-                    <li id="searchButton" class="icon-button"><a href="#"><img src="/img/icon/Search_alt.svg" alt="검색 아이콘 입니다." id="searchIcon"></a></li>
-                </ul>
-                <div class="menuCover"></div>
-                <!-- <div id="searchModal">
-                    <div class="searchPopup">
-                        <form class="searchBox">
-                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
-                            <ul class="searchList">
-                                <li><a href="#">#저염 도시락</a></li>
-                                <li><a href="#">#고단백 도시락</a></li>
-                                <li><a href="#">#단백질 도시락</a></li>
-                                <li><a href="#">#비건 도시락</a></li>
-                            </ul>
-                        </form>
-                        <button class="searchCloseBtn"></button>
-                    </div>
-                </div> -->
-                <!-- <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <form class="searchBox"></form>
-                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
-                            <ul class="searchList">
-                                <li><a href="#">#저염 도시락</a></li>
-                                <li><a href="#">#고단백 도시락</a></li>
-                                <li><a href="#">#단백질 도시락</a></li>
-                                <li><a href="#">#비건 도시락</a></li>
-                            </ul>
-                        </form>
-                    </div>
-                </div> -->                              
-                <!-- <div id="modal" class="modal">
-                    <div class="modal-content">
-                        <form class="searchBox"></form>
-                            <input type="text" name="searchText" id="searchText" placeholder="저당 도시락">
-                            <ul class="searchList">
-                                <li><a href="#">#저염 도시락</a></li>
-                                <li><a href="#">#고단백 도시락</a></li>
-                                <li><a href="#">#단백질 도시락</a></li>
-                                <li><a href="#">#비건 도시락</a></li>
-                            </ul>
-                        </form>
-                    </div>
-                </div> -->
+
             </div>
 
-            
-        </header>
+        </div>
+
+    </section>
+
+
+    <!-- 모달 검색창 -->
+    <div id="searchModalBg"></div>
