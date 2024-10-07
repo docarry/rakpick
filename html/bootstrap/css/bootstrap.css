@@ -4776,7 +4776,8 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.page-link:hover {
+/* 페이지네이션 버튼 수정 */
+/* .page-link:hover {
   z-index: 2;
   color: var(--bs-pagination-hover-color);
   background-color: var(--bs-pagination-hover-bg);
@@ -4788,7 +4789,7 @@ textarea.form-control-lg {
   background-color: var(--bs-pagination-focus-bg);
   outline: 0;
   box-shadow: var(--bs-pagination-focus-box-shadow);
-}
+} */
 .page-link.active, .active > .page-link {
   z-index: 3;
   color: var(--bs-pagination-active-color);

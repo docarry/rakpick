@@ -18,10 +18,10 @@ var reviewSwiper = new Swiper("#review-Swiper.mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     loop: true,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1500,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
     320: {
         slidesPerView: 1,

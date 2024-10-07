@@ -1,50 +1,3 @@
-// 검색창 모달
-document.getElementById('searchButton').addEventListener('click', function() {
-    const searchModal = document.getElementById('searchModal');
-    const searchModalBg = document.getElementById('searchModalBg');
-    const searchIcon = document.getElementById('searchIcon');
-
-    if (searchModal.classList.contains('active')) {
-        // 비활성화 애니메이션
-        searchModal.style.opacity = '0';
-        searchModal.style.transform = 'translateY(-2rem)';
-        searchModalBg.style.opacity = '0'; // 배경 서서히 사라지기
-        searchIcon.src = '/img/icon/Search_alt.svg'; // 아이콘을 즉시 원래대로 복구
-        setTimeout(() => {
-            searchModal.classList.remove('active');
-            searchModalBg.classList.remove('active');
-            searchModal.style.visibility = 'hidden'; // 비활성화 후 모달을 숨김
-            searchModalBg.style.visibility = 'hidden'; // 배경을 숨김
-        }, 600); // 0.3초 후에 비활성화 처리
-    } else {
-        // 활성화 애니메이션
-        searchModal.style.visibility = 'visible'; // 모달을 보이게 설정
-        searchModalBg.style.visibility = 'visible'; // 배경을 보이게 설정
-        searchModal.classList.add('active');
-        searchModalBg.classList.add('active');
-        searchIcon.src = '/img/icon/Close.svg';  // 아이콘을 즉시 변경
-        setTimeout(() => {
-            searchModal.style.opacity = '1';
-            searchModal.style.transform = 'translateY(0)';
-            searchModalBg.style.opacity = '1'; // 배경 서서히 나타나기
-        }, 10); // 약간의 지연 후 애니메이션 실행
-    }
-});
-// searchModalBg를 클릭해도 모달이 사라지지 않도록 제거
-// searchModalBg 클릭에 대한 이벤트 리스너 제거
-// 만약 searchModalBg 클릭을 무시하고 싶다면 이 부분을 생략하거나 아무 동작도 하지 않도록 유지.
-document.getElementById('searchModalBg').removeEventListener('click', function() {
-    document.getElementById('searchModal').style.display = 'none';
-    document.getElementById('searchModalBg').style.display = 'none';
-    // 아이콘을 원래대로 복구
-    document.getElementById('searchIcon').src = '/img/icon/Search_alt.svg';
-});
-// 검색창 모달 종료
-
-
-
-
-
 $(function(){
 
     // PC header 고정
@@ -170,3 +123,48 @@ $(function(){
 
 });
 
+
+
+
+// 검색창 모달
+document.getElementById('searchButton').addEventListener('click', function() {
+    const searchModal = document.getElementById('searchModal');
+    const searchModalBg = document.getElementById('searchModalBg');
+    const searchIcon = document.getElementById('searchIcon');
+
+    if (searchModal.classList.contains('active')) {
+        // 비활성화 애니메이션
+        searchModal.style.opacity = '0';
+        searchModal.style.transform = 'translateY(-2rem)';
+        searchModalBg.style.opacity = '0'; // 배경 서서히 사라지기
+        searchIcon.src = '/img/icon/Search_alt.svg'; // 아이콘을 즉시 원래대로 복구
+        setTimeout(() => {
+            searchModal.classList.remove('active');
+            searchModalBg.classList.remove('active');
+            searchModal.style.visibility = 'hidden'; // 비활성화 후 모달을 숨김
+            searchModalBg.style.visibility = 'hidden'; // 배경을 숨김
+        }, 600); // 0.3초 후에 비활성화 처리
+    } else {
+        // 활성화 애니메이션
+        searchModal.style.visibility = 'visible'; // 모달을 보이게 설정
+        searchModalBg.style.visibility = 'visible'; // 배경을 보이게 설정
+        searchModal.classList.add('active');
+        searchModalBg.classList.add('active');
+        searchIcon.src = '/img/icon/Close.svg';  // 아이콘을 즉시 변경
+        setTimeout(() => {
+            searchModal.style.opacity = '1';
+            searchModal.style.transform = 'translateY(0)';
+            searchModalBg.style.opacity = '1'; // 배경 서서히 나타나기
+        }, 10); // 약간의 지연 후 애니메이션 실행
+    }
+});
+// searchModalBg를 클릭해도 모달이 사라지지 않도록 제거
+// searchModalBg 클릭에 대한 이벤트 리스너 제거
+// 만약 searchModalBg 클릭을 무시하고 싶다면 이 부분을 생략하거나 아무 동작도 하지 않도록 유지.
+document.getElementById('searchModalBg').removeEventListener('click', function() {
+    document.getElementById('searchModal').style.display = 'none';
+    document.getElementById('searchModalBg').style.display = 'none';
+    // 아이콘을 원래대로 복구
+    document.getElementById('searchIcon').src = '/img/icon/Search_alt.svg';
+});
+// 검색창 모달 종료
