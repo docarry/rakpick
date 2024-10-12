@@ -168,3 +168,45 @@ document.getElementById('searchModalBg').removeEventListener('click', function()
     document.getElementById('searchIcon').src = '/img/icon/Search_alt.svg';
 });
 // 검색창 모달 종료
+
+
+
+
+// 락픽스토리 페이지
+//scroll reveal 
+window.sr = ScrollReveal ();    
+sr.reveal ('.animate-left', {
+    origin:'left',
+    duration:1000,
+    distance:'25rem',
+    delay:600
+
+
+});
+
+sr.reveal ('.animate-right', {
+    origin:'right',
+    duration:1000,
+    distance:'25rem',
+    delay:300
+
+
+});
+
+sr.reveal ('.animate-top', {
+    origin:'top',
+    duration:1000,
+    distance:'25rem',
+    delay:300
+
+
+});
+
+sr.reveal ('.animate-bottom', {
+    origin:'bottom',
+    duration:1000,
+    distance:'25rem',
+    delay:300
+
+
+});
