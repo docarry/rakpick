@@ -214,7 +214,8 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+/* 수정 */
+/* h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -229,9 +230,9 @@ h1, .h1 {
   h1, .h1 {
     font-size: 2.5rem;
   }
-}
+} */
 
-h2, .h2 {
+/* h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
@@ -264,12 +265,13 @@ h5, .h5 {
 
 h6, .h6 {
   font-size: 1rem;
-}
+} */
 
-p {
+/* 수정 */
+/* p {
   margin-top: 0;
   margin-bottom: 1rem;
-}
+} */
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -285,7 +287,8 @@ address {
   line-height: inherit;
 }
 
-ol,
+/* 수정 */
+/* ol,
 ul {
   padding-left: 2rem;
 }
@@ -311,7 +314,7 @@ dt {
 dd {
   margin-bottom: 0.5rem;
   margin-left: 0;
-}
+} */
 
 blockquote {
   margin: 0 0 1rem;

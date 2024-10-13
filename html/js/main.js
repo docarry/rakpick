@@ -119,8 +119,22 @@ $(function(){
     });
     // 초기 로딩 시 이미지 변경
     $(window).trigger('resize');
-    
 
+
+
+    // 장바구니 페이지
+    // Remove Items From Cart
+    $('a.remove').click(function(){
+        event.preventDefault();
+        $( this ).parent().parent().parent().hide( 400 );
+    
+    })
+    // Just for testing, show all items
+        $('a.btn.continue').click(function(){
+        $('li.items').show(400);
+        })
+    
+        
 });
 
 
@@ -210,3 +224,129 @@ sr.reveal ('.animate-bottom', {
 
 
 });
+
+
+
+// 장바구니 페이지
+var taxRate = 0.1;
+$(function() {
+  var jsonData = [
+    {
+      title: "나만의 도시락 No.1",
+      price: 7900,
+      quantity: 1,
+      total: 7900
+    },
+    {
+      title: "나만의 도시락 No.2",
+      price: 9900,
+      quantity: 1,
+      total: 9900
+    },
+    {
+      title: "나만의 도시락 No.3",
+      price: 10900,
+      quantity: 1,
+      total: 10900
+    },
+    {
+      title: "나만의 도시락 No.4",
+      price: 8900,
+      quantity: 1,
+      total: 8900
+    },
+    {
+      title: "나만의 도시락 No.5",
+      price: 11900,
+      quantity: 1,
+      total: 11900
+    },
+    {
+      title: "나만의 도시락 No.6",
+      price: 9900,
+      quantity: 1,
+      total: 9900
+    }
+  ];
+  var html = "<tbody>";
+  $.each(jsonData, function() {
+    html +=
+      '<tr class="cart-item">' +
+      "        <td>" +
+      '          <input type="checkbox" class="cart-item-check" checked />' +
+      "        </td>" +
+      "        <td>" +
+      "          " +
+      this.title +
+      "        </td>" +
+      "        <td>" +
+      this.price +
+      "</td>" +
+      "        <td>" +
+      '          <input class="input is-primary cart-item-qty" style="width:2.2rem" type="number" min="1" value="' +
+      this.quantity +
+      '" data-price="' +
+      this.price +
+      '">' +
+      "        </td>" +
+      '        <td class="cart-item-total">' +
+      this.total +
+      "</td>" +
+      "        <td>" +
+      '          <a class="button is-small">삭제</a>' +
+      "        </td>" +
+      "      </tr>";
+  });
+  html += "</tbody>";
+  $(".shopping-cart").append(html);
+  
+  recalculateCart();
+
+  $(".cart-item-check").change(function() {
+    recalculateCart();
+  });
+
+  $(".cart-item-qty").change(function() {
+    var $this = $(this);
+    var parent = $this.parent().parent();
+    parent.find(".cart-item-check").prop("checked", "checked");
+    var price = $this.attr("data-price");
+    var quantity = $this.val();
+    var total = price * quantity;
+    parent.find(".cart-item-total").html(total.toFixed(0));
+    recalculateCart();
+  });
+
+  $(".button").click(function() {
+    var parent = $(this)
+      .parent()
+      .parent();
+    parent.remove();
+    recalculateCart();
+  });
+});
+function recalculateCart() {
+  var subTotal = 0;
+  var grandTotal = 0;
+  var tax = 0;
+  var items = $(".cart-item");
+  $.each(items, function() {
+    var itemCheck = $(this).find(".cart-item-check");
+    var itemQuantity = $(this).find(".cart-item-qty");
+    if (itemCheck.prop("checked")) {
+      var itemTotal = itemQuantity.val() * itemQuantity.attr("data-price");
+      subTotal += itemTotal;
+    }
+  });
+  if (subTotal > 0) {
+    tax = subTotal * taxRate;
+    grandTotal = subTotal + tax;
+    $(".totals,.checkout").show();
+  } else {
+    $(".totals,.checkout").hide();
+  }
+  $("#cart-subtotal").html(subTotal.toFixed(0));
+  $("#cart-total").html(grandTotal.toFixed(0));
+  $("#cart-tax").html(tax.toFixed(0));
+}
+// 장바구니 끝

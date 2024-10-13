@@ -7,31 +7,6 @@ html, body{
     background-color: #f2f2f2;
 }
 
-
-// 부트스트랩
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-    margin-top: 0;
-    margin-bottom: 0 !important;
-    font-weight: 500;
-    line-height: 1.2;
-    // color: #333 !important;
-}
-
-ol, ul, dl {
-    margin-top: 0;
-    margin-bottom: 0 !important;
-}
-
-ol, ul {
-    padding-left: 0 !important;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 0 !important;
-}
-
-
 // 맞춤 클래스
 .disN{
     display: none;
@@ -57,7 +32,24 @@ p {
 .borderW{
     border-color: #fff !important;
 }
-
+.stroyN{
+    display: none;
+}
+.eventN{
+    display: none;
+}
+.memN{
+    display: none;
+}
+.subscrN{
+    display: none;
+}
+.rankingN{
+    display: none;
+}
+.coachingN{
+    display: none;
+}
 // 모바일 버튼
 .m-moreBtn{
     width: 260px;

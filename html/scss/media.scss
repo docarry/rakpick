@@ -871,6 +871,14 @@
                         width: 70%;
                         margin: 2px 0;
                     }
+                    &.slideOn{
+                        span{
+                            &:nth-child(1){
+                                transform: rotate(45deg);
+                                margin: 12px -8px -6px -8px;
+                            }
+                        }
+                    }
                 }
                 h1{
                     a{
@@ -882,30 +890,25 @@
                 .m-nav{
                     .m-depth01{
                         > li{
-                            &:nth-child(2):hover .m-depth02{
-                                height: 70px;
-                            }
-                            &:nth-child(3):hover .m-depth02{
-                                height: 140px;
-                            }
-                            &:nth-child(6):hover .m-depth02{
-                                height: 210px;
-                            }
                             > a{
-                                font-size: 2.4rem;
-                                line-height: 2.4;
+                                font-size: 1.2rem;
                                 &::after{
-                                    width: 24px;
-                                    height: 24px;
                                 }
                             }
                             .m-depth02{
                                 li{
                                     a{
-                                        font-size: 2rem;
-                                        line-height: 2.4;                                    
+                                        font-size: 1rem;                        
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .m-utility{
+                        gap: 50px;
+                        li{
+                            span{
+                                font-size: 1rem;
                             }
                         }
                     }
@@ -1647,40 +1650,6 @@
                 .m-nav{
                     .m-utility{
                         gap: 30px;
-                    }
-                    .m-depth01{
-                        > li{
-                            &:nth-child(2):hover .m-depth02{
-                                height: 50px;
-                            }
-                            &:nth-child(3):hover .m-depth02{
-                                height: 100px;
-                            }
-                            &:nth-child(6):hover .m-depth02{
-                                height: 150px;
-                            }
-                            &:hover a::after{
-                                margin-top: 20px;
-                            }
-                            > a{
-                                font-size: 2rem;
-                                line-height: 2.2;
-                                &::after{
-                                    width: 16px;
-                                    height: 16px;
-                                    border-right: solid 3px #333;
-                                    border-bottom: solid 3px #333;
-                                }
-                            }
-                            .m-depth02{
-                                li{
-                                    a{
-                                        font-size: 1.7rem;
-                                        line-height: 2.4;                                    
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
                 .navBtn{
