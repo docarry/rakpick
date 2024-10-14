@@ -1194,7 +1194,7 @@
                     color: $subColor04;
                     font-size: 2rem;
                     text-align: center;
-                    font-family: 700;
+                    font-weight: 700;
                 }
             }
             .pointBox{
@@ -2363,6 +2363,12 @@
 
 // 장바구니 페이지
 #cart{
+    h2{
+        padding: 6rem 0 2rem;
+        font-size: 3rem;
+        color: #333;
+        text-align: center;
+    }
     a{
         color: #FF6D00;
     }
