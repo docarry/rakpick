@@ -124,24 +124,12 @@
                         &:nth-child(5) a::after{
                             display: none;
                         }
-                        &:nth-child(2):hover .m-depth02{
-                            height: 4rem;
-                        }
-                        &:nth-child(3):hover .m-depth02{
-                            height: 7rem;
-                        }
-                        &:nth-child(6):hover .m-depth02{
-                            height: 10rem;
-                        }
-                        &:hover a::after{
-                            transform: rotate(225deg);
-                            margin-top: 30px;
-                        }
                         > a{
                             font-size: 1.6rem;
                             font-weight: 500;
                             color: #333;
                             line-height: 2.6;
+                            position: relative;
                             &::after{
                                 content: "";
                                 display: block;
@@ -152,28 +140,24 @@
                                 transform: rotate(45deg);
                                 transition: all .4s ease-in-out;
                             }
+                            &.active::after{
+                                transform: rotate(225deg);
+                                margin-top: 1rem;
+                            }
                         }
                         .m-depth02{
                             height: 0;
                             overflow: hidden;
-                            transition: all .4s ease-in-out;
+                            transition: height 0.4s ease-in-out;
+                            &.open{
+                                height: auto;
+                                overflow: hidden;
+                            }
                             li{
                                 a{
                                     font-size: 1.2rem;
                                     color: #333;
                                     line-height: 2.6;
-                                }
-                                .m-arrow{
-                                    width: 1rem;
-                                    height: 1rem;
-                                    border-bottom: solid 2px #333;
-                                    border-left: solid 2px #333;
-                                    display: block;
-                                    transform: rotate(-45deg);
-                                    transition: transform 0.5s ease;
-                                    &.rotated{
-                                        transform: rotate(135deg) translate(10px, -10px);
-                                    }
                                 }
                             }
                         }

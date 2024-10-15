@@ -4763,6 +4763,7 @@ textarea.form-control-lg {
   list-style: none;
 }
 
+/* 수정 */
 .page-link {
   position: relative;
   display: block;
@@ -4770,7 +4771,7 @@ textarea.form-control-lg {
   font-size: var(--bs-pagination-font-size);
   color: var(--bs-pagination-color);
   text-decoration: none;
-  background-color: var(--bs-pagination-bg);
+  /* background-color: var(--bs-pagination-bg); */
   border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

@@ -801,21 +801,21 @@
         }
 
 
-        // 페이지 버튼
-        #eventPageBtn{
+        // 이벤트 페이지 버튼
+        #pageBtn{
             margin-top: 4rem;
             .eventBtnList{
                 .page-item{
-                    padding: 0 1rem 0;
+                    padding: 0 .6rem 0;
                     &.active .page-link{
                         background-color: $mainColor01;
-                        padding: 1rem 1.4rem 1rem;
+                        padding: .4rem .8rem .4rem;
                         color: $subColor04;
                     }
                     a{
                         font-size: 1rem;
                         color: $textDetail;
-                        padding: 1rem 1.4rem 1rem;
+                        padding: .4rem .8rem .4rem;
                         border-radius: .6rem;
                         .pageLeft{
                             border-top: solid 2px $textDetail;
@@ -838,7 +838,7 @@
                         border: none;
                         &:focus{
                         background-color: $mainColor01;
-                        padding: 1rem 1.4rem 1rem;
+                        padding: .4rem .8rem .4rem;
                         border-radius: 0.6rem;
                         color: $subColor04;
                         }
@@ -1693,6 +1693,52 @@
             > a{
                 color: #333;
             font-size: 1rem;
+            }
+        }
+    }
+
+    // 이용후기 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
             }
         }
     }
@@ -2615,6 +2661,52 @@
     .product-grid3 .rating li.disable {
         color: #dcdcdc;
     }
+
+    // 베스트 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width:680px) {
     #best{
@@ -2848,6 +2940,52 @@
 
     .product-grid3 .rating li.disable {
         color: #dcdcdc;
+    }
+
+    // 정기배송 페이지 버튼
+    #pageBtn{
+        margin-top: 4rem;
+        .eventBtnList{
+            .page-item{
+                padding: 0 .6rem 0;
+                &.active .page-link{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    color: $subColor04;
+                }
+                a{
+                    font-size: 1rem;
+                    color: $textDetail;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: .6rem;
+                    .pageLeft{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(-135deg);
+                    }
+                    .pageRight{
+                        border-top: solid 2px $textDetail;
+                        border-right: solid 2px $textDetail;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        transform: rotate(45deg);
+                    }
+                }
+                .page-link{
+                    border: none;
+                    &:focus{
+                    background-color: $mainColor01;
+                    padding: .4rem .8rem .4rem;
+                    border-radius: 0.6rem;
+                    color: $subColor04;
+                    }
+                }
+            }
+        }
     }
 }
 @media only screen and (max-width:720px) {

@@ -866,7 +866,7 @@
         .m-headerBox{
             .m-headerList{
                 .navBtn{
-                    top: 16px;
+                    top: 24px;
                     span{
                         width: 70%;
                         margin: 2px 0;
@@ -875,7 +875,7 @@
                         span{
                             &:nth-child(1){
                                 transform: rotate(45deg);
-                                margin: 12px -8px -6px -8px;
+                                margin: 8px -8px -6px -8px;
                             }
                         }
                     }
