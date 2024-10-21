@@ -1,3 +1,16 @@
+// AOS 애니메이트 플러그인
+AOS.init({
+  once: true,
+});
+
+$(function(){
+  $(window).on('load', function () {
+    AOS.refresh();
+  });
+})
+
+
+
 $(function(){
 
     // PC header 고정
