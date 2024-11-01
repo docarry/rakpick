@@ -892,7 +892,10 @@
                         > li{
                             > a{
                                 font-size: 1.2rem;
-                                &::after{
+                            }
+                            span{
+                                a{
+                                    font-size: 1.2rem;
                                 }
                             }
                             .m-depth02{

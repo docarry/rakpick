@@ -151,74 +151,59 @@ $(function(){
 
 
 
-// M 헤더 가상선택자 링크이동 안되면서 소메뉴 열리는것
-// 터치 이벤트 여부를 감지하는 플래그
-let isTouchDevice = false;
-
+// M 헤더 링크이동 안되면서 소메뉴 열리는것
 // 모든 서브 메뉴와 화살표 초기화 함수
 function closeAllSubMenus() {
   document.querySelectorAll('.m-depth02').forEach(subMenu => {
-    subMenu.style.height = '0px'; // 서브 메뉴 닫기
+    subMenu.style.height = '0px'; // 서브메뉴 닫기
     subMenu.classList.remove('open'); // 'open' 클래스 제거
   });
 
-  document.querySelectorAll('.m-nav .m-depth01 li a').forEach(link => {
-    link.classList.remove('active'); // 가상 선택자 초기화
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.classList.remove('active'); // 화살표 비활성화
   });
 }
 
-// 메뉴 토글 이벤트 핸들러
-function toggleMenu(event) {
-  if (event.type === 'touchstart') {
-    isTouchDevice = true; // 터치 이벤트 감지
-  }
-
-  // 터치와 클릭 중복 방지
-  if (event.type === 'click' && isTouchDevice) {
-    isTouchDevice = false;
-    return;
-  }
-
-  event.preventDefault(); // 기본 링크 이동 방지
-
-  const linkElement = event.currentTarget;
-  const subMenu = linkElement.nextElementSibling;
+// 서브메뉴 토글 이벤트 핸들러
+function toggleSubMenu(event) {
+  const toggleBtn = event.currentTarget;
+  const subMenu = toggleBtn.parentElement.nextElementSibling; // 부모의 다음 요소인 서브메뉴
 
   if (subMenu && subMenu.classList.contains('m-depth02')) {
     if (subMenu.classList.contains('open')) {
-      // 이미 열린 메뉴를 닫기
+      // 서브메뉴 닫기
       subMenu.style.height = '0px';
       subMenu.classList.remove('open');
-      linkElement.classList.remove('active');
+      toggleBtn.classList.remove('active'); // 화살표 비활성화
     } else {
       // 다른 메뉴 닫기
       closeAllSubMenus();
 
-      // 현재 메뉴 열기
+      // 현재 서브메뉴 열기
       subMenu.style.height = `${subMenu.scrollHeight}px`;
       subMenu.classList.add('open');
-      linkElement.classList.add('active');
+      toggleBtn.classList.add('active'); // 화살표 활성화
     }
+
+    event.stopPropagation(); // 이벤트 전파 차단
   }
-
-  event.stopPropagation(); // 이벤트 전파 차단
 }
 
-// 이벤트 리스너 등록 함수 (터치와 클릭 모두 지원)
-function addMenuToggleEvents(link) {
-  link.addEventListener('touchstart', toggleMenu); // 모바일 터치 이벤트
-  link.addEventListener('click', toggleMenu); // 데스크탑 클릭 이벤트
+// 이벤트 리스너 등록 함수
+function addMenuToggleEvents() {
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', toggleSubMenu); // 클릭 시 서브메뉴 토글
+  });
 }
-
-// 모든 메뉴에 이벤트 등록
-document.querySelectorAll('.m-nav .m-depth01 li a').forEach(addMenuToggleEvents);
 
 // 외부 클릭 시 모든 메뉴 닫기
 document.addEventListener('click', function () {
   closeAllSubMenus();
 });
 
-// M 헤더 가상선택자 링크이동 안되면서 소메뉴 열리는것 끝
+// 이벤트 등록 실행
+addMenuToggleEvents();
+// M 헤더 링크이동 안되면서 소메뉴 열리는것 끝
 
 
 
